@@ -59,35 +59,35 @@ export function PatientForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 flex-1">
         <section className="mb-5 space-y-4">
-          <h1 className="header">Welcome 👋</h1>
+          <h1 className="header"> Your Health, Our Priority</h1>
           <p className="text-dark-700">Scheduale your first appointment</p>
-          <CustomFormField
-            control={form.control}
-            fieldType={FormFieldType.INPUT}
-            name="name"
-            label="Full name"
-            placeholder="mohamed atef"
-            iconSrc="/assets/icons/user.svg"
-            iconAlt="user"
-          />
-          <CustomFormField
-            control={form.control}
-            fieldType={FormFieldType.INPUT}
-            name="email"
-            label="Email"
-            placeholder="mohamed@next.io"
-            iconSrc="/assets/icons/email.svg"
-            iconAlt="email"
-          />
-          <CustomFormField
-            control={form.control}
-            fieldType={FormFieldType.PHONE_INPUT}
-            name="phone"
-            label="Phone Number"
-            placeholder="(02) 123-4567"
-            iconSrc="/assets/icons/user.svg"
-          />
         </section>
+        <CustomFormField
+          control={form.control}
+          fieldType={FormFieldType.INPUT}
+          name="name"
+          label="Full name"
+          placeholder="mohamed atef"
+          iconSrc="/assets/icons/user.svg"
+          iconAlt="user"
+        />
+        <CustomFormField
+          control={form.control}
+          fieldType={FormFieldType.INPUT}
+          name="email"
+          label="Email"
+          placeholder="mohamed@next.io"
+          iconSrc="/assets/icons/email.svg"
+          iconAlt="email"
+        />
+        <CustomFormField
+          control={form.control}
+          fieldType={FormFieldType.PHONE_INPUT}
+          name="phone"
+          label="Phone Number"
+          placeholder="(02) 123-4567"
+          iconSrc="/assets/icons/user.svg"
+        />
 
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>
