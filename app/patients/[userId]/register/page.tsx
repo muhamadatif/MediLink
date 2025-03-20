@@ -3,7 +3,8 @@ import { getUser } from "@/lib/actions/patient.actions";
 import Image from "next/image";
 import React from "react";
 
-const Register = async ({ params: { userId } }: SearchParamProps) => {
+const Register = async ({ params }: SearchParamProps) => {
+  const { userId } = await params;
   const user = await getUser(userId);
   return (
     <div className="flex h-screen max-h-screen">
@@ -18,7 +19,7 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
           />
 
           {user && <RegisterForm user={user} />}
-          <p className="copyright py-12">© 2025 MediLink</p>
+          <p className="copyright py-12">© 2024 MediLink</p>
         </div>
       </section>
       <Image

@@ -65,7 +65,9 @@ export function RegisterForm({ user }: { user: User }) {
       if (patient) {
         router.push(`/patients/${user.$id}/new-appointment`);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
 
     setIsLoading(false);
   }
