@@ -228,7 +228,7 @@
   }
 
   .shad-dialog {
-    @apply bg-dark-400 border-dark-500 !important;
+    @apply bg-dark-400  border-dark-500 !important;
   }
 
   .shad-dialog button {
