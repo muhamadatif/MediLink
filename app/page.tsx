@@ -24,7 +24,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
           <div className="text-14-regular mt-10 flex justify-between items-center">
             <p className="justify-items-end text-dark-600 xl:text-left">
-              © 2024 MediLink
+              © 2025 MediLink
             </p>
             <Link href={"/?admin=true"} className="text-green-500">
               Admin

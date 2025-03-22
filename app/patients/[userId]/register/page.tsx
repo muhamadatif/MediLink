@@ -3,9 +3,17 @@ import { getUser } from "@/lib/actions/patient.actions";
 import Image from "next/image";
 import React from "react";
 
+import * as Sentry from "@sentry/nextjs";
+
 const Register = async ({ params }: SearchParamProps) => {
   const { userId } = await params;
+
   const user = await getUser(userId);
+
+  Sentry.captureMessage("user_view_register", {
+    level: "info",
+    extra: { userName: user?.name },
+  });
   return (
     <div className="flex h-screen max-h-screen">
       <section className="remove-scrollbar container  ">
@@ -19,7 +27,7 @@ const Register = async ({ params }: SearchParamProps) => {
           />
 
           {user && <RegisterForm user={user} />}
-          <p className="copyright py-12">© 2024 MediLink</p>
+          <p className="copyright py-12">© 2025 MediLink</p>
         </div>
       </section>
       <Image
